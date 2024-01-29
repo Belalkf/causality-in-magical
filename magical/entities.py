@@ -24,7 +24,14 @@ from magical.style import (
 
 class Entity(abc.ABC):
     """Basic class for logical 'things' that can be displayed on screen and/or
-    interact via physics."""
+    interact via physics.
+    
+    Entity Abstract Base Class (Entity):
+
+    An abstract base class for logical entities in the game world.
+    Provides methods for setting up graphics and physics, updating logic and physics, and reconstructing the entity's state.
+    Includes a method for generating a unique group ID, which is useful for creating ShapeFilters in Pymunk.
+    Defines a method for adding bodies or shapes to the Pymunk space and keeps track of them for later use."""
     @abc.abstractmethod
     def setup(self, viewer, space, phys_vars):
         """Set up entity graphics/physics usig a gym_render.Viewer and a
